@@ -11,23 +11,83 @@
   --color-text-muted: #737780;
   --color-border: #e5e5e5;
   --color-error: #ffa939;
-  
+
   --font-heading: 'Montserrat', sans-serif;
   --font-body: 'Inter', sans-serif;
-  
+
   --radius-sm: 4px;
   --radius-md: 8px;
   --radius-lg: 12px;
   --radius-xl: 24px;
-  
+
   --shadow-1: 0 4px 12px rgba(0, 51, 102, 0.08);
   --shadow-hover: 0 8px 24px rgba(0, 51, 102, 0.12);
-  
+
   --transition-default: all 0.3s ease;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-background);
+  color: var(--color-text-main);
+  line-height: 1.5;
+}
+
+h1 {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: 0, 02rem;
+  color: var(--color-primary);
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: var(--transition-default);
+}
+
+a:hover,
+a:focus {
+  color: var(--color-primary-light);
+}
+
+.u-text-center {
+  text-align: center;
+}
+
+.u-margin-top-md {
+  margin-top: 1.5rem;
+}
+
+.u-margin-bottom-sm {
+  margin-bottom: 0.5rem;
+}
+
+.u-display-column {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.logo {
+  width: 48px;
+  height: 48px;
+}
+
+.page-content {
+  opacity: 0;
+  animation: showContent 0.5s ease 2s forwards;
+}
+
+@keyframes showContent {
+  to { opacity: 1; }
 }
