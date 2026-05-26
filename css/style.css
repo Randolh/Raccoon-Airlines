@@ -83,11 +83,21 @@ a:focus {
   height: 48px;
 }
 
+.icon {
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+  color: var(--color-primary);
+  transition: var(--transition-default);
+}
+
 .page-content {
   opacity: 0;
-  animation: showContent 0.5s ease 2s forwards;
+  animation: showContent 0.5s ease 0.1s forwards;
 }
 
 @keyframes showContent {
-  to { opacity: 1; }
+  to {
+    opacity: 1;
+  }
 }
