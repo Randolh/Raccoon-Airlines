@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resident Airlines - Register</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/forms.css">
+    <link rel="stylesheet" href="./css/layout.css">
+</head>
+
+<body>
+    <div class="layout page-content">
+        <main class="main-content main-content--centered">
+            <div class="auth-container card">
+                <div class="card__header">
+                    <svg class="icon u-margin-bottom-sm">
+                        <use href="./assets/icons.svg#user"></use>
+                    </svg>
+                    <h1 class="card__title">Create Account</h1>
+                </div>
+
+                <form class="form" action="./create-password.html">
+                    <div class="form__group">
+                        <label class="form__label" for="fullname">Full Name</label>
+                        <input class="form__input" type="text" name="fullname" id="fullname" placeholder="Leon Kennedy"
+                            required>
+                    </div>
+
+                    <div class="form__group">
+                        <label class="form__label" for="idnumber">ID Number</label>
+                        <input class="form__input" type="text" name="idnumber" id="idnumber" placeholder="1234567890123"
+                            maxlength="13" required>
+                    </div>
+
+                    <div class="form__group">
+                        <label class="form__label" for="email">Email</label>
+                        <input class="form__input" type="email" name="email" id="email"
+                            placeholder="leon.kennedy@example.com" required>
+                    </div>
+
+                    <div class="form__group">
+                        <label class="form__label" for="phone">Phone</label>
+                        <input class="form__input" type="tel" name="phone" id="phone" placeholder="+502 12345678"
+                            required>
+                    </div>
+
+                    <div class="form__group">
+                        <label class="form__label" for="country">Country</label>
+                        <select class="form__select" name="country" id="country" required>
+                            <option value="" disabled selected>Select your city</option>
+
+                            <optgroup label="Norteamérica">
+                                <option value="ca">Canadá</option>
+                                <option value="us">Estados Unidos</option>
+                                <option value="mx">México</option>
+                            </optgroup>
+
+                            <optgroup label="Centroamérica">
+                                <option value="bz">Belice</option>
+                                <option value="cr">Costa Rica</option>
+                                <option value="sv">El Salvador</option>
+                                <option value="gt">Guatemala</option>
+                                <option value="hn">Honduras</option>
+                                <option value="ni">Nicaragua</option>
+                                <option value="pa">Panamá</option>
+                            </optgroup>
+
+                            <optgroup label="Sudamérica">
+                                <option value="ar">Argentina</option>
+                                <option value="bo">Bolivia</option>
+                                <option value="br">Brasil</option>
+                                <option value="cl">Chile</option>
+                                <option value="co">Colombia</option>
+                                <option value="ec">Ecuador</option>
+                                <option value="gy">Guyana</option>
+                                <option value="py">Paraguay</option>
+                                <option value="pe">Perú</option>
+                                <option value="uy">Uruguay</option>
+                                <option value="ve">Venezuela</option>
+                            </optgroup>
+                        </select>
+                    </div>
+                    <input class="btn btn--primary u-margin-top-md" type="submit" value="Create">
+
+                    <div class="u-text-center">
+                        <span class="form__label">Already have an account? </span>
+                        <a href="./index.html" class="btn--link">Login</a>
+                    </div>
+                </form>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>
