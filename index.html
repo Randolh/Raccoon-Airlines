@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <div class="layout page--content">
+    <div class="layout page-content">
         <main class="main-content main-content--centered">
             <div class="auth-container card">
                 <div class="card__header">
@@ -22,15 +22,15 @@
                     <p class="card__subtitle">FLYING TO YOUR DREAMS</p>
                 </div>
 
-                <form action="form" action="#">
+                <form class="form" action="./menu.html">
                     <div class="form__group">
                         <label class="form__label" for="email">Email</label>
-                        <input class="form__input" type="email" id="email" placeholder="leon.kennedy@example.com" required>
+                        <input class="form__input" type="email" name="email" id="email" placeholder="leon.kennedy@example.com" required>
                     </div>
 
                     <div class="form__group">
                         <label class="form__label" for="password">Password</label>
-                        <input class="form__input" type="password" id="password" placeholder="••••••••" required>
+                        <input class="form__input" type="password" name="password" id="password" placeholder="••••••••" required>
                     </div>
 
                     <div class="form__group form__group--inline">
@@ -40,11 +40,11 @@
                         </label>
                     </div>
 
-                    <a href="menu.html" class="btn btn--primary u-margin-top-md">Login</a>
+                    <input class="btn btn--primary u-margin-top-md" type="submit" value="Login">
 
                     <div class="card-links u-text-center u-display-column">
-                        <a href="register.html" class="btn--link">Create account</a>
-                        <a href="recover.html" class="btn--link">Forgot your password?</a>
+                        <a href="./register.html" class="btn--link">Create account</a>
+                        <a href="./recover.html" class="btn--link">Forgot your password?</a>
                     </div>
                 </form>
             </div>
