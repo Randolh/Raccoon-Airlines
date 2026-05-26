@@ -5,6 +5,7 @@
   --color-primary-light: #943a3a;
   --color-secondary: #c5a059;
   --color-secondary-light: #e9c176;
+  --color-active-secondary: #ffc271;
   --color-background: #f9f9f9;
   --color-surface: #ffffff;
   --color-text-main: #1a1c1c;
@@ -66,6 +67,10 @@ a:focus {
 
 .u-margin-top-md {
   margin-top: 1.5rem;
+}
+
+.u-margin-bottom-md {
+  margin-bottom: 1.5rem;
 }
 
 .u-margin-bottom-sm {
