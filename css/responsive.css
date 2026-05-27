@@ -4,10 +4,6 @@
         padding: 3rem;
     }
 
-    .grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
     .auth-container {
         padding: 2rem;
     }
@@ -15,25 +11,6 @@
     .flight-card__body {
         grid-template-columns: repeat(4, 1fr);
         align-items: center;
-    }
-
-    .flight-card__footer {
-        display: flex;
-        justify-content: flex-end;
-    }
-
-    .flight-card__footer .btn {
-        width: auto;
-    }
-
-    .form--search {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1.5rem;
-    }
-
-    .form--search .form__group--full {
-        grid-column: span 2;
     }
 }
 
@@ -52,10 +29,6 @@
 
     .main-content {
         padding: 4rem;
-    }
-
-    .grid {
-        grid-template-columns: repeat(3, 1fr);
     }
 
     .header {
@@ -85,7 +58,7 @@
         flex-shrink: 0;
     }
 
-    .header {
+    .header, .back-button {
         display: none;
     }
 

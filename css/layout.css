@@ -44,6 +44,8 @@
   flex-direction: column;
   gap: 0.5rem;
   width: 100%;
+  overflow: scroll;
+  padding-bottom: 6rem;
 }
 
 .main-content--centered {
