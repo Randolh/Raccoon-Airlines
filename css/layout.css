@@ -231,7 +231,7 @@
   color: #1565c0;
 }
 
-.flight-card__body {
+.flight-card__body, .flight-card__body--second {
   padding: 1.5rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
