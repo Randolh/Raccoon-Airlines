@@ -456,3 +456,11 @@
   margin-top: 0.25rem;
   display: inline-block;
 }
+
+.mobile-user-profile__menu {
+  margin-left: auto;
+  font-size: 0.875rem;
+  color: var(--color-primary);
+  text-decoration: underline;
+  font-weight: 500;
+}
