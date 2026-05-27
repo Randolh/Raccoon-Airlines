@@ -129,12 +129,12 @@
                             <div class="form__group">
                                 <label class="form__label" for="contact-name">Full Name</label>
                                 <input class="form__input" type="text" name="contact-name" id="contact-name"
-                                    placeholder="Leon S. Kennedy" required>
+                                    placeholder="Leon S. Kennedy" pattern="[A-Za-zÀ-ÿ\s]+" title="Solo letras y espacios permitidos" required>
                             </div>
                             <div class="form__group">
                                 <label class="form__label" for="contact-phone">Phone</label>
                                 <input class="form__input" type="tel" name="contact-phone" id="contact-phone"
-                                    placeholder="+502 12345678" required>
+                                    placeholder="+502 12345678" pattern="[\+0-9\s\-]+" title="Introduce un número de teléfono válido" required>
                             </div>
 
                             <div class="form__group form__group--full u-margin-top-md">
