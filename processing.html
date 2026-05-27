@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raccoon Airlines - Procesando Pago</title>
+    <meta http-equiv="refresh" content="3;url=menu.html">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/layout.css">
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(255, 255, 255, 0.95);
+        }
+
+        .spinner {
+            width: 80px;
+            height: 80px;
+            border: 6px solid #f3f3f3;
+            border-top: 6px solid #d32f2f;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin-bottom: 24px;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .payment-text {
+            font-size: 1.8rem;
+            color: #333;
+            font-weight: 600;
+            font-family: inherit;
+            text-align: center;
+        }
+
+        .payment-subtext {
+            font-size: 1rem;
+            color: #666;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="spinner"></div>
+    <div class="payment-text">Procesando tu pago...</div>
+    <div class="payment-subtext">Serás redirigido automáticamente en un momento.</div>
+</body>
+</html>
