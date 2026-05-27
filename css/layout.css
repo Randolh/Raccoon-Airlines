@@ -73,6 +73,10 @@
   transition: margin-left 0.3s ease, padding 0.3s ease;
 }
 
+.main-button {
+  padding-bottom: 6rem;
+}
+
 .main-content--centered {
   justify-content: center;
   align-items: center;
