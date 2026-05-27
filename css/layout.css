@@ -46,6 +46,7 @@
   width: 100%;
   overflow: scroll;
   padding-bottom: 6rem;
+  transition: margin-left 0.3s ease, padding 0.3s ease;
 }
 
 .main-content--centered {
