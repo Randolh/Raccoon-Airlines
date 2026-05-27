@@ -11,9 +11,34 @@
   align-items: center;
   justify-content: space-between;
   box-shadow: var(--shadow-1);
-  position: sticky;
-  top: 0;
+  position: static;
   z-index: 100;
+}
+
+.auth-header {
+  background: transparent;
+  box-shadow: none;
+  position: static;
+  padding: 1rem 1.5rem 0;
+}
+
+.header__back {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: var(--transition-default);
+}
+
+.header__back:hover {
+  color: var(--color-secondary);
+}
+
+.header__back .icon-small {
+  transform: rotate(180deg);
 }
 
 .header__brand {
@@ -44,6 +69,8 @@
   flex-direction: column;
   gap: 0.5rem;
   width: 100%;
+  overflow: scroll;
+  transition: margin-left 0.3s ease, padding 0.3s ease;
 }
 
 .main-content--centered {
@@ -58,6 +85,12 @@
   padding: 1.5rem;
   box-shadow: var(--shadow-1);
   transition: var(--transition-default);
+}
+
+.card-check {
+  max-width: 800px;
+  margin: 0 auto;
+  width: 100%
 }
 
 .card:hover {
@@ -222,7 +255,7 @@
   color: #1565c0;
 }
 
-.flight-card__body {
+.flight-card__body, .flight-card__body--second {
   padding: 1.5rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -252,4 +285,169 @@
   font-weight: 700;
   font-size: 1.5rem;
   color: var(--color-primary);
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 280px;
+  background-color: var(--color-primary);
+  color: var(--color-surface);
+  z-index: 999;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+  overflow-y: auto;
+}
+
+.sidebar__header {
+  padding: 1.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sidebar__brand {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--color-secondary);
+}
+
+.sidebar__brand .header__logo {
+  fill: var(--color-secondary);
+}
+
+.sidebar__user {
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sidebar__avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-family: var(--font-heading);
+}
+
+.sidebar__user-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar__name {
+  font-weight: 600;
+}
+
+.sidebar__icon {
+  width: 32px;
+  height: 32px;
+  color: var(--color-secondary);
+}
+
+.sidebar__nav {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 0;
+  flex: 1;
+}
+
+.sidebar__link {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.5rem;
+  color: var(--color-surface);
+  text-decoration: none;
+  font-weight: 500;
+  transition: var(--transition-default);
+}
+
+.sidebar__link .icon {
+  fill: var(--color-surface);
+  opacity: 0.7;
+  width: 24px;
+  height: 24px;
+}
+
+.sidebar__link:hover,
+.sidebar__link:focus,
+.sidebar__link--active {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--color-secondary);
+}
+
+.sidebar__link:hover .icon,
+.sidebar__link--active .icon {
+  fill: var(--color-secondary);
+  opacity: 1;
+}
+
+.sidebar__footer {
+  padding: 1rem 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sidebar__link--logout:hover {
+  color: var(--color-error);
+}
+
+.sidebar__link--logout:hover .icon {
+  fill: var(--color-error);
+}
+
+.dashboard-inner-content {
+  width: 100%;
+}
+
+.mobile-user-profile {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem;
+}
+
+.mobile-user-profile__avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-family: var(--font-heading);
+}
+
+.mobile-user-profile__info {
+  display: flex;
+  flex-direction: column;
+}
+
+.mobile-user-profile__name {
+  font-weight: 600;
+  color: var(--color-primary);
+  font-family: var(--font-heading);
+}
+
+.mobile-user-profile__logout {
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+  text-decoration: underline;
+  margin-top: 0.25rem;
+  display: inline-block;
 }

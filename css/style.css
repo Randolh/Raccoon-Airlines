@@ -61,8 +61,73 @@ a:focus {
   color: var(--color-primary-light);
 }
 
+/* Subtext */
 .u-text-center {
   text-align: center;
+}
+
+/* Simulated Loading Screen */
+.loader-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--color-background);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: hideLoader 0.6s cubic-bezier(0.8, 0, 0.2, 1) 1.5s forwards;
+}
+
+.loader-screen__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.loader-screen__logo {
+  width: 100px;
+  height: 100px;
+  animation: spinLogo 2s linear infinite;
+}
+
+.loader-screen__bar {
+  width: 200px;
+  height: 4px;
+  background-color: #d1d1d1;
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+}
+
+.loader-screen__bar::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0%;
+  background-color: var(--color-primary);
+  border-radius: 4px;
+  animation: fillBar 1.2s ease-out forwards;
+}
+
+@keyframes hideLoader {
+  0% { opacity: 1; visibility: visible; }
+  100% { opacity: 0; visibility: hidden; }
+}
+
+@keyframes spinLogo {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes fillBar {
+  0% { width: 0%; }
+  100% { width: 100%; }
 }
 
 .u-margin-top-md {
@@ -94,6 +159,14 @@ a:focus {
   height: 48px;
   color: var(--color-primary);
   transition: var(--transition-default);
+}
+
+.icon-small {
+  width: 20px;
+  height: 20px;
+  fill: none;
+  stroke: currentColor;
+  color: currentColor;
 }
 
 .flight__icon {

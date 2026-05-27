@@ -1,0 +1,70 @@
+/* Tablet */
+@media screen and (min-width: 768px) {
+    .main-content {
+        padding: 3rem;
+    }
+
+    .auth-container {
+        padding: 3rem;
+        max-width: 450px;
+        box-shadow: var(--shadow-hover);
+        border-top: 6px solid var(--color-primary);
+    }
+
+    .flight-card__body {
+        grid-template-columns: repeat(4, 1fr);
+        align-items: center;
+    }
+}
+
+/* Desktop */
+@media screen and (min-width: 1024px) {
+    .layout {
+        max-width: 1280px;
+        margin: 0 auto;
+        background-color: var(--color-background);
+        box-shadow: var(--shadow-hover);
+    }
+
+    body {
+        background-color: #e5e5e5;
+    }
+
+    .main-content {
+        padding: 4rem;
+    }
+
+    .header {
+        padding: 1.5rem 4rem;
+    }
+}
+
+/* Tablet Dashboard Layout */
+@media screen and (min-width: 768px) {
+    .layout--dashboard {
+        flex-direction: row;
+        height: 100vh;
+        overflow: hidden;
+        max-width: 100%;
+        margin: 0;
+        box-shadow: none;
+    }
+
+    .sidebar {
+        transform: translateX(0);
+    }
+
+    .header, .back-button, .mobile-user-profile {
+        display: none;
+    }
+
+    .main-content--dashboard {
+        margin-left: 280px;
+        padding: 3rem;
+        overflow-y: auto;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
