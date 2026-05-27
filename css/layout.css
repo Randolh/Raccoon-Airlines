@@ -215,6 +215,7 @@
 
 .flight-card:hover {
   box-shadow: var(--shadow-hover);
+  transform: translateY(-2px);
 }
 
 .flight-card::before {
