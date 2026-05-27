@@ -73,6 +73,10 @@
   transition: margin-left 0.3s ease, padding 0.3s ease;
 }
 
+.main-button {
+  padding-bottom: 6rem;
+}
+
 .main-content--centered {
   justify-content: center;
   align-items: center;
@@ -211,6 +215,7 @@
 
 .flight-card:hover {
   box-shadow: var(--shadow-hover);
+  transform: translateY(-2px);
 }
 
 .flight-card::before {
@@ -450,4 +455,12 @@
   text-decoration: underline;
   margin-top: 0.25rem;
   display: inline-block;
+}
+
+.mobile-user-profile__menu {
+  margin-left: auto;
+  font-size: 0.875rem;
+  color: var(--color-primary);
+  text-decoration: underline;
+  font-weight: 500;
 }
