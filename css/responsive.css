@@ -48,13 +48,10 @@
     }
 
     .sidebar {
-        display: flex;
-        flex-direction: column;
+        position: static;
+        transform: translateX(0);
         width: 280px;
-        background-color: var(--color-primary);
-        color: var(--color-surface);
         height: 100%;
-        overflow-y: auto;
         flex-shrink: 0;
     }
 
