@@ -51,12 +51,6 @@
   align-items: center;
 }
 
-.container-check {
-  max-width: 800px;
-  margin: 0 auto;
-  width: 100%
-}
-
 /* CARDS */
 .card {
   background-color: var(--color-surface);
@@ -64,6 +58,12 @@
   padding: 1.5rem;
   box-shadow: var(--shadow-1);
   transition: var(--transition-default);
+}
+
+.card-check {
+  max-width: 800px;
+  margin: 0 auto;
+  width: 100%
 }
 
 .card:hover {

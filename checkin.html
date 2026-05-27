@@ -8,10 +8,65 @@
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/forms.css">
     <link rel="stylesheet" href="./css/layout.css">
+    <link rel="stylesheet" href="./css/responsive.css">
 </head>
 
 <body>
-    <div class="layout page-content">
+    <div class="layout layout--dashboard page-content">
+        <aside class="sidebar">
+            <div class="sidebar__header">
+                <div class="sidebar__brand">
+                    <svg class="header__logo">
+                        <use href="./assets/logo.svg#logo"></use>
+                    </svg>
+                    <span>Resident Airlines</span>
+                </div>
+            </div>
+
+            <div class="sidebar__user">
+                <div class="sidebar__avatar">LK</div>
+                <div class="sidebar__user-info">
+                    <span class="sidebar__name">Leon Kennedy</span>
+                </div>
+            </div>
+
+            <nav class="sidebar__nav">
+                <a href="menu.html" class="sidebar__link">
+                    <svg class="sidebar__icon">
+                        <use href="./assets/icons.svg#grid"></use>
+                    </svg>
+                    Dashboard
+                </a>
+                <a href="search-flights.html" class="sidebar__link">
+                    <svg class="sidebar__icon">
+                        <use href="./assets/icons.svg#search"></use>
+                    </svg>
+                    Search Flights
+                </a>
+                <a href="checkin.html" class="sidebar__link sidebar__link--active">
+                    <svg class="sidebar__icon">
+                        <use href="./assets/icons.svg#check"></use>
+                    </svg>
+                    Check-In
+                </a>
+                <a href="my-flights.html" class="sidebar__link">
+                    <svg class="sidebar__icon">
+                        <use href="./assets/icons.svg#new"></use>
+                    </svg>
+                    My Flights
+                </a>
+            </nav>
+
+            <div class="sidebar__footer">
+                <a href="index.html" class="sidebar__link sidebar__link--logout">
+                    <svg class="sidebar__icon">
+                        <use href="./assets/icons.svg#logout"></use>
+                    </svg>
+                    Log Out
+                </a>
+            </div>
+        </aside>
+
         <header class="header">
             <div class="header__brand">
                 <svg class="logo u-margin-bottom-sm">
@@ -26,60 +81,63 @@
         </header>
 
         <main class="main-content">
-            <div class="container-check">
-                <h1 class="card__title u-text-center">Web Check-In</h1>
+            <div class="dashboard-inner-content">
+                <div class="card-check">
+                    <h1 class="card__title u-text-center">Web Check-In</h1>
 
-                <section class="flight-card u-margin-bottom-md">
-                    <div class="flight-card__header">
-                        <div class="flight-card__route">
-                            GUA
-                            <svg class="icon flight__icon">
-                                <use href="./assets/icons.svg#arrow"></use>
-                            </svg>
-                            BOG
+                    <section class="flight-card u-margin-bottom-md">
+                        <div class="flight-card__header">
+                            <div class="flight-card__route">
+                                GUA
+                                <svg class="icon flight__icon">
+                                    <use href="./assets/icons.svg#arrow"></use>
+                                </svg>
+                                BOG
+                            </div>
                         </div>
+                        <div class="flight-card__body">
+                            <div class="flight-card__detail">
+                                <span class="flight-card__label">Flight</span>
+                                <span class="flight-card__value">VAA025</span>
+                            </div>
+                            <div class="flight-card__detail">
+                                <span class="flight-card__label">Date</span>
+                                <span class="flight-card__value">Oct 15, 2026 | 08:00 AM</span>
+                            </div>
+                            <div class="flight-card__detail">
+                                <span class="flight-card__label">Passenger</span>
+                                <span class="flight-card__value">Leon Kennedy</span>
+                            </div>
+                            <div class="flight-card__detail">
+                                <span class="flight-card__label">Seat</span>
+                                <span class="flight-card__value">12A</span>
+                            </div>
+                        </div>
+                    </section>
+
+                    <div class="card">
+                        <h2 class="card__title">Emergency Contact</h2>
+                        <p class="card__subtitle u-margin-bottom-md">Please provide an emergency contact before
+                            completing
+                            check-in.</p>
+
+                        <form class="form form--search" action="./menu.html">
+                            <div class="form__group">
+                                <label class="form__label" for="contact-name">Full Name</label>
+                                <input class="form__input" type="text" name="contact-name" id="contact-name"
+                                    placeholder="Leon S. Kennedy" required>
+                            </div>
+                            <div class="form__group">
+                                <label class="form__label" for="contact-phone">Phone</label>
+                                <input class="form__input" type="tel" name="contact-phone" id="contact-phone"
+                                    placeholder="+502 12345678" required>
+                            </div>
+
+                            <div class="form__group form__group--full u-margin-top-md">
+                                <input class="btn btn--primary" type="submit" value="Complete Check-In">
+                            </div>
+                        </form>
                     </div>
-                    <div class="flight-card__body">
-                        <div class="flight-card__detail">
-                            <span class="flight-card__label">Flight</span>
-                            <span class="flight-card__value">VAA025</span>
-                        </div>
-                        <div class="flight-card__detail">
-                            <span class="flight-card__label">Date</span>
-                            <span class="flight-card__value">Oct 15, 2026 | 08:00 AM</span>
-                        </div>
-                        <div class="flight-card__detail">
-                            <span class="flight-card__label">Passenger</span>
-                            <span class="flight-card__value">Leon Kennedy</span>
-                        </div>
-                        <div class="flight-card__detail">
-                            <span class="flight-card__label">Seat</span>
-                            <span class="flight-card__value">12A</span>
-                        </div>
-                    </div>
-                </section>
-
-                <div class="card">
-                    <h2 class="card__title">Emergency Contact</h2>
-                    <p class="card__subtitle u-margin-bottom-md">Please provide an emergency contact before completing
-                        check-in.</p>
-
-                    <form class="form form--search" action="./menu.html">
-                        <div class="form__group">
-                            <label class="form__label" for="contact-name">Full Name</label>
-                            <input class="form__input" type="text" name="contact-name" id="contact-name"
-                                placeholder="Leon S. Kennedy" required>
-                        </div>
-                        <div class="form__group">
-                            <label class="form__label" for="contact-phone">Phone</label>
-                            <input class="form__input" type="tel" name="contact-phone" id="contact-phone"
-                                placeholder="+502 12345678" required>
-                        </div>
-
-                        <div class="form__group form__group--full u-margin-top-md">
-                            <input class="btn btn--primary" type="submit" value="Complete Check-In">
-                        </div>
-                    </form>
                 </div>
             </div>
         </main>
