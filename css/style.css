@@ -96,6 +96,12 @@ a:focus {
   transition: var(--transition-default);
 }
 
+.flight__icon {
+  width: 20px;
+  height: 20px;
+  color: var(--color-text-main);
+}
+
 .page-content {
   opacity: 0;
   animation: showContent 0.5s ease 0.1s forwards;
