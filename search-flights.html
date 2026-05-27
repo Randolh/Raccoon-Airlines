@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resident Airlines - Search Flights </title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/forms.css">
+    <link rel="stylesheet" href="./css/layout.css">
+    <link rel="stylesheet" href="./css/responsive.css">
+</head>
+
+<body>
+    <div class="layout page-content">
+        <header class="header">
+            <div class="header__brand">
+                <svg class="logo u-margin-bottom-sm">
+                    <use href="./assets/logo.svg#logo"></use>
+                </svg>
+                <span>Resident Airlines</span>
+            </div>
+            <div class="header__user">
+                <span class="u-margin-right-sm">Hello Leon Kennedy!</span>
+                <a href="./index.html" class="btn--link">Log Out</a>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <div class="card" style="max-width: 800px; margin: 0 auto; width: 100%;">
+                <div class="card__header">
+                    <h1 class="card__title">Find your next destination</h1>
+                    <p class="card__subtitle">Book your flight with Resident Airlines</p>
+                </div>
+
+                <form class="form form--search" action="./flights.html">
+                    <div class="form__group form__group--full form__group--inline u-margin-bottom-sm">
+                        <div class="form__checkbox-container">
+                            <input type="checkbox" class="form__checkbox" name="on_way" id="on_way">
+                            <label class="form__label" for="on_way">One way</label>
+                        </div>
+                    </div>
+
+                    <div class="form__group">
+                        <label class="form__label" for="origin">Origin</label>
+                        <input class="form__input" type="text" name="origin" id="origin" placeholder="City or Airport"
+                            required>
+                    </div>
+
+                    <div class="form__group">
+                        <label class="form__label" for="destination">Destination</label>
+                        <input class="form__input" type="text" name="destination" id="destination"
+                            placeholder="City or Airport" required>
+                    </div>
+
+                    <div class="form__group">
+                        <label class="form__label" for="departure">Departure Date</label>
+                        <input class="form__input" type="date" name="departure" id="departure" required>
+                    </div>
+
+                    <div class="form__group">
+                        <label class="form__label" for="return">Return Date</label>
+                        <input class="form__input" type="date" name="return" id="return">
+                    </div>
+
+                    <div class="form__group form__group--full u-margin-top-md">
+                        <input class="btn btn--primary" type="submit" value="Search">
+                    </div>
+                </form>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>

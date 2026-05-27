@@ -1,0 +1,254 @@
+.layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.header {
+  background-color: var(--color-surface);
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: var(--shadow-1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header__brand {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--color-primary);
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+.header__logo {
+  width: 32px;
+  height: 32px;
+  fill: var(--color-primary);
+}
+
+.header__user {
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.main-content {
+  flex: 1;
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.main-content--centered {
+  justify-content: center;
+  align-items: center;
+}
+
+/* CARDS */
+.card {
+  background-color: var(--color-surface);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-1);
+  transition: var(--transition-default);
+}
+
+.card:hover {
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-2px);
+}
+
+.card__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.card__title {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.card__subtitle {
+  color: var(--color-text-muted);
+  font-size: 0.875rem;
+}
+
+.card__big-text {
+  font-size: 1.1rem;
+}
+
+.subtext {
+  color: var(--color-text-muted);
+  font-size: 0.875rem;
+  text-align: justify;
+}
+
+.auth-container {
+  width: 100%;
+  max-width: 400px;
+}
+
+.grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: 1fr;
+}
+
+.grid_flight {
+  grid-template-columns: 1fr;
+}
+
+.action-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem 1.5rem;
+  text-decoration: none;
+  background-color: var(--color-surface);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-1);
+  transition: var(--transition-default);
+  border-left: 4px solid var(--color-primary);
+}
+
+.action-card__icon {
+  width: 48px;
+  height: 48px;
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+  transition: var(--transition-default);
+}
+
+.action-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+  color: var(--color-secondary);
+  border-left-color: var(--color-secondary);
+}
+
+.action-card:focus {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+  color: var(--color-active-secondary);
+  border-left-color: var(--color-active-secondary);
+  background-color: rgb(241, 241, 241);
+}
+
+.action-card:hover .action-card__icon {
+  color: var(--color-secondary);
+}
+
+.action-card:focus .action-card__icon {
+  color: var(--color-active-secondary);
+}
+
+.action-card__title {
+  font-size: 1.25rem;
+  font-family: var(--font-heading);
+  font-weight: 600;
+}
+
+.card-links {
+  margin-top: 1rem;
+}
+
+.flight-card {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-surface);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-1);
+  overflow: hidden;
+  position: relative;
+  transition: var(--transition-default);
+}
+
+.flight-card:hover {
+  box-shadow: var(--shadow-hover);
+}
+
+.flight-card::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background-color: var(--color-secondary);
+}
+
+.flight-card__header {
+  padding: 1rem 1.5rem;
+  border-bottom: 1px dashed var(--color-border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flight-card__route {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.125rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--color-primary);
+}
+
+.flight-card__code {
+  padding: 0.25rem 0.75rem;
+  border-radius: 50px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  background-color: var(--color-background);
+  color: var(--color-text-main);
+}
+
+.flight-card__status {
+  background-color: #e3f2fd;
+  color: #1565c0;
+}
+
+.flight-card__body {
+  padding: 1.5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+}
+
+.flight-card__detail {
+  display: flex;
+  flex-direction: column;
+}
+
+.flight-card__label {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.25rem;
+}
+
+.flight-card__value {
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.flight-card__price {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: var(--color-primary);
+}

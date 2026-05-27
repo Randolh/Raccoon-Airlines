@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+
+  <!-- logo -->
+  <symbol id="logo" viewBox="0 0 300 300">
+
+    <defs>
+      <radialGradient id="umbrella-red">
+
+        <stop
+          stop-color="var(--umbrella-red-light, #c00)"
+          offset=".3"
+        />
+
+        <stop
+          stop-color="var(--umbrella-red-dark, #660000)"
+          offset=".7"
+        />
+
+      </radialGradient>
+
+      <radialGradient id="umbrella-white">
+
+        <stop
+          stop-color="var(--umbrella-white-1, #ddd)"
+          offset=".3"
+        />
+
+        <stop
+          stop-color="var(--umbrella-white-2, #fff)"
+          offset=".6"
+        />
+
+        <stop
+          stop-color="var(--umbrella-white-3, #ddd)"
+          offset=".9"
+        />
+
+      </radialGradient>
+    </defs>
+
+    <g id="umbrella-a">
+
+      <g id="umbrella-b">
+
+        <path
+          d="m206 5s-28 14-56 14-56-14-56-14l56 135z"
+          fill="url(#umbrella-red)"
+          stroke="#870200"
+        />
+
+        <path
+          d="m87 8s-10 30-30 50c-19 19-49 29-49 29l135 56z"
+          fill="url(#umbrella-white)"
+          stroke="#bdbdbd"
+        />
+
+      </g>
+
+      <use
+        transform="rotate(90,150,150)"
+        href="#umbrella-b"
+      />
+
+    </g>
+
+    <use
+      transform="rotate(180,150,150)"
+      href="#umbrella-a"
+    />
+
+  </symbol>
+
+  <!-- logo v2 -->
+  <symbol id="logo-solid" viewBox="0 0 300 300">
+
+    <g id="umbrella-x">
+
+      <g id="umbrella-y">
+
+        <path
+          d="m206 5s-28 14-56 14-56-14-56-14l56 135z"
+          fill="currentColor"
+          stroke="currentColor"
+        />
+
+        <path
+          d="m87 8s-10 30-30 50c-19 19-49 29-49 29l135 56z"
+          fill="var(--logo-secondary, #dadada)"
+          stroke="var(--logo-secondary, #dadada)"
+        />
+
+      </g>
+
+      <use
+        transform="rotate(90,150,150)"
+        href="#umbrella-y"
+      />
+
+    </g>
+
+    <use
+      transform="rotate(180,150,150)"
+      href="#umbrella-x"
+    />
+
+  </symbol>
+
+</svg>
