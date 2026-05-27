@@ -34,13 +34,13 @@
                     <div class="form__group">
                         <label class="form__label" for="email">Email</label>
                         <input class="form__input" type="email" name="email" id="email"
-                            placeholder="leon.kennedy@example.com" required>
+                            placeholder="leon.kennedy@example.com" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" required title="Introduce un correo válido">
                     </div>
 
                     <div class="form__group">
                         <label class="form__label" for="password">Password</label>
                         <input class="form__input" type="password" name="password" id="password" placeholder="••••••••"
-                            required>
+                            pattern=".{8,}" title="La contraseña debe tener al menos 8 caracteres" required>
                     </div>
 
                     <div class="form__group form__group--inline">

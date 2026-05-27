@@ -33,25 +33,25 @@
                     <div class="form__group">
                         <label class="form__label" for="fullname">Full Name</label>
                         <input class="form__input" type="text" name="fullname" id="fullname" placeholder="Leon Kennedy"
-                            required>
+                            pattern="[A-Za-zÀ-ÿ\s]+" title="Solo letras y espacios permitidos" required>
                     </div>
 
                     <div class="form__group">
                         <label class="form__label" for="idnumber">ID Number</label>
                         <input class="form__input" type="text" name="idnumber" id="idnumber" placeholder="1234567890123"
-                            maxlength="13" required>
+                            maxlength="13" pattern="[0-9]+" title="Introduce solo números" required>
                     </div>
 
                     <div class="form__group">
                         <label class="form__label" for="email">Email</label>
                         <input class="form__input" type="email" name="email" id="email"
-                            placeholder="leon.kennedy@example.com" required>
+                            placeholder="leon.kennedy@example.com" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" title="Introduce un correo válido" required>
                     </div>
 
                     <div class="form__group">
                         <label class="form__label" for="phone">Phone</label>
                         <input class="form__input" type="tel" name="phone" id="phone" placeholder="+502 12345678"
-                            required>
+                            pattern="[\+0-9\s\-]+" title="Introduce un número de teléfono válido" required>
                     </div>
 
                     <div class="form__group">
