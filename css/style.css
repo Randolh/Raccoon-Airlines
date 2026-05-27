@@ -96,6 +96,14 @@ a:focus {
   transition: var(--transition-default);
 }
 
+.icon-small {
+  width: 20px;
+  height: 20px;
+  fill: none;
+  stroke: currentColor;
+  color: currentColor;
+}
+
 .flight__icon {
   width: 20px;
   height: 20px;

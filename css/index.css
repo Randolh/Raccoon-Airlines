@@ -94,14 +94,6 @@
     gap: 0.5rem;
 }
 
-.icon-small {
-    width: 20px;
-    height: 20px;
-    fill: none;
-    stroke: currentColor;
-    color: currentColor;
-}
-
 .btn--outline {
     background-color: transparent;
     color: var(--color-surface);

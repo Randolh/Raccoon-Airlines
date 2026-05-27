@@ -16,6 +16,32 @@
   z-index: 100;
 }
 
+.auth-header {
+  background: transparent;
+  box-shadow: none;
+  position: static;
+  padding: 1rem 1.5rem 0;
+}
+
+.header__back {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: var(--transition-default);
+}
+
+.header__back:hover {
+  color: var(--color-secondary);
+}
+
+.header__back .icon-small {
+  transform: rotate(180deg);
+}
+
 .header__brand {
   display: flex;
   align-items: center;
@@ -45,7 +71,6 @@
   gap: 0.5rem;
   width: 100%;
   overflow: scroll;
-  padding-bottom: 6rem;
   transition: margin-left 0.3s ease, padding 0.3s ease;
 }
 
