@@ -216,6 +216,11 @@
   color: var(--color-text-main);
 }
 
+.flight-card__status {
+  background-color: #e3f2fd;
+  color: #1565c0;
+}
+
 .flight-card__body {
   padding: 1.5rem;
   display: grid;
