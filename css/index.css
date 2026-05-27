@@ -113,8 +113,9 @@
 
 /* Features */
 .features {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 2rem;
     max-width: 1200px;
     margin: 0 auto 4rem;
@@ -122,6 +123,7 @@
 }
 
 .feature-card {
+    flex: 1 1 300px;
     background: var(--color-surface);
     padding: 2.5rem 2rem;
     border-radius: var(--radius-lg);
