@@ -42,7 +42,7 @@
   padding: 2rem 1.5rem;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 0.5rem;
   width: 100%;
 }
 
@@ -83,6 +83,10 @@
   font-size: 0.875rem;
 }
 
+.card__big-text {
+  font-size: 1.1rem;
+}
+
 .subtext {
   color: var(--color-text-muted);
   font-size: 0.875rem;
@@ -97,6 +101,10 @@
 .grid {
   display: grid;
   gap: 1.5rem;
+  grid-template-columns: 1fr;
+}
+
+.grid_flight {
   grid-template-columns: 1fr;
 }
 
@@ -123,7 +131,7 @@
   transition: var(--transition-default);
 }
 
-.action-card:hover{
+.action-card:hover {
   transform: translateY(-4px);
   box-shadow: var(--shadow-hover);
   color: var(--color-secondary);
@@ -153,5 +161,89 @@
 }
 
 .card-links {
-    margin-top: 1rem;
+  margin-top: 1rem;
+}
+
+.flight-card {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-surface);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-1);
+  overflow: hidden;
+  position: relative;
+  transition: var(--transition-default);
+}
+
+.flight-card:hover {
+  box-shadow: var(--shadow-hover);
+}
+
+.flight-card::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background-color: var(--color-secondary);
+}
+
+.flight-card__header {
+  padding: 1rem 1.5rem;
+  border-bottom: 1px dashed var(--color-border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flight-card__route {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.125rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--color-primary);
+}
+
+.flight-card__code {
+  padding: 0.25rem 0.75rem;
+  border-radius: 50px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  background-color: var(--color-background);
+  color: var(--color-text-main);
+}
+
+.flight-card__body {
+  padding: 1.5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+}
+
+.flight-card__detail {
+  display: flex;
+  flex-direction: column;
+}
+
+.flight-card__label {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.25rem;
+}
+
+.flight-card__value {
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.flight-card__price {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: var(--color-primary);
 }
