@@ -4,51 +4,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resident Airlines</title>
+    <title>Raccoon Airlines - Welcome</title>
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/forms.css">
     <link rel="stylesheet" href="./css/layout.css">
+    <link rel="stylesheet" href="./css/responsive.css">
+    <link rel="stylesheet" href="./css/index.css">
 </head>
 
 <body>
     <div class="layout page-content">
-        <main class="main-content main-content--centered">
-            <div class="auth-container card">
-                <div class="card__header">
-                    <svg class="logo u-margin-bottom-sm">
-                        <use href="./assets/logo.svg#logo"></use>
-                    </svg>
-                    <h1 class="card__title">Resident Airlines</h1>
-                    <p class="card__subtitle">FLYING TO YOUR DREAMS</p>
-                </div>
-
-                <form class="form" action="./menu.html">
-                    <div class="form__group">
-                        <label class="form__label" for="email">Email</label>
-                        <input class="form__input" type="email" name="email" id="email" placeholder="leon.kennedy@example.com" required>
-                    </div>
-
-                    <div class="form__group">
-                        <label class="form__label" for="password">Password</label>
-                        <input class="form__input" type="password" name="password" id="password" placeholder="••••••••" required>
-                    </div>
-
-                    <div class="form__group form__group--inline">
-                        <label class="form__checkbox-container">
-                            <input type="checkbox" name="remember" id="remember" class="form__checkbox">
-                            <span class="form__label">Remember my details</span>
-                        </label>
-                    </div>
-
-                    <input class="btn btn--primary u-margin-top-md" type="submit" value="Login">
-
-                    <div class="card-links u-text-center u-display-column">
-                        <a href="./register.html" class="btn--link">Create account</a>
-                        <a href="./recover.html" class="btn--link">Forgot your password?</a>
-                    </div>
-                </form>
+        <header class="header header--index">
+            <div class="header__brand">
+                <svg class="logo u-margin-bottom-sm">
+                    <use href="./assets/logo.svg#logo"></use>
+                </svg>
+                <span>Raccoon Airlines</span>
             </div>
+        </header>
+
+        <main class="main-content main-content--index">
+            <div class="hero">
+                <div class="hero__bg"></div>
+                <div class="hero__content">
+                    <h1>Welcome to Raccoon Airlines</h1>
+                    <p>Experience the ultimate comfort and premium service on every flight. Your journey begins here.
+                    </p>
+
+                    <div class="hero__actions">
+                        <a href="./login.html" class="btn btn--primary">
+                            <svg class="icon-small">
+                                <use href="./assets/icons.svg#user"></use>
+                            </svg>
+                            Login
+                        </a>
+                        <a href="./register.html" class="btn btn--outline">
+                            <svg class="icon-small">
+                                <use href="./assets/icons.svg#plane"></use>
+                            </svg>
+                            Register
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <section class="features">
+                <div class="feature-card">
+                    <svg class="feature-card__icon">
+                        <use href="./assets/icons.svg#plane"></use>
+                    </svg>
+                    <h3>Global Reach</h3>
+                    <p>Fly to over 150 destinations worldwide with our expanding network.</p>
+                </div>
+                <div class="feature-card">
+                    <svg class="feature-card__icon">
+                        <use href="./assets/icons.svg#check"></use>
+                    </svg>
+                    <h3>Premium Comfort</h3>
+                    <p>Relax in our award-winning seats designed for ultimate relaxation.</p>
+                </div>
+                <div class="feature-card">
+                    <svg class="feature-card__icon">
+                        <use href="./assets/icons.svg#search"></use>
+                    </svg>
+                    <h3>Easy Booking</h3>
+                    <p>Find the best flights and manage your trips effortlessly.</p>
+                </div>
+            </section>
         </main>
+
+        <footer class="footer">
+            <p>&copy; 2026 Raccoon Airlines. All rights reserved.</p>
+        </footer>
     </div>
 </body>
 

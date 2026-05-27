@@ -4,132 +4,199 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resident Airlines - Available Flights</title>
+    <title>Raccoon Airlines - Available Flights</title>
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/forms.css">
     <link rel="stylesheet" href="./css/layout.css">
+    <link rel="stylesheet" href="./css/responsive.css">
 </head>
 
 <body>
-    <div class="layout page-content">
+    <div class="loader-screen">
+        <div class="loader-screen__content">
+            <img class="loader-screen__logo" src="./assets/logo.svg" alt="Umbrella Logo">
+            <div class="loader-screen__bar"></div>
+        </div>
+    </div>
+    <div class="layout layout--dashboard page-content">
+        <aside class="sidebar">
+            <div class="sidebar__header">
+                <div class="sidebar__brand">
+                    <svg class="header__logo">
+                        <use href="./assets/logo.svg#logo"></use>
+                    </svg>
+                    <span>Raccoon Airlines</span>
+                </div>
+            </div>
+
+            <div class="sidebar__user">
+                <div class="sidebar__avatar">LK</div>
+                <div class="sidebar__user-info">
+                    <span class="sidebar__name">Leon Kennedy</span>
+                </div>
+            </div>
+
+            <nav class="sidebar__nav">
+                <a href="menu.html" class="sidebar__link">
+                    <svg class="sidebar__icon">
+                        <use href="./assets/icons.svg#grid"></use>
+                    </svg>
+                    Dashboard
+                </a>
+                <a href="search-flights.html" class="sidebar__link">
+                    <svg class="sidebar__icon">
+                        <use href="./assets/icons.svg#search"></use>
+                    </svg>
+                    Search Flights
+                </a>
+                <a href="checkin.html" class="sidebar__link">
+                    <svg class="sidebar__icon">
+                        <use href="./assets/icons.svg#check"></use>
+                    </svg>
+                    Check-In
+                </a>
+                <a href="my-flights.html" class="sidebar__link">
+                    <svg class="sidebar__icon">
+                        <use href="./assets/icons.svg#new"></use>
+                    </svg>
+                    My Flights
+                </a>
+            </nav>
+
+            <div class="sidebar__footer">
+                <a href="index.html" class="sidebar__link sidebar__link--logout">
+                    <svg class="sidebar__icon">
+                        <use href="./assets/icons.svg#logout"></use>
+                    </svg>
+                    Logout
+                </a>
+            </div>
+        </aside>
+
         <header class="header">
             <div class="header__brand">
                 <svg class="logo u-margin-bottom-sm">
                     <use href="./assets/logo.svg#logo"></use>
                 </svg>
-                <span>Resident Airlines</span>
-            </div>
-            <div class="header__user">
-                <span class="u-margin-right-sm">Hello Leon Kennedy!</span>
-                <a href="./index.html" class="btn--link">Log Out</a>
+                <span>Raccoon Airlines</span>
             </div>
         </header>
 
-        <main class="main-content">
-            <div class="u-margin-bottom-md">
-                <h1 class="card__title u-text-center">Available Flights</h1>
-                <p class="card__subtitle card__big-text">Bogotá - Colombia</p>
-                <p class="card__subtitle card__big-text">October - 15</p>
+        <div class="mobile-user-profile">
+            <div class="mobile-user-profile__avatar">LK</div>
+            <div class="mobile-user-profile__info">
+                <span class="mobile-user-profile__name">Leon Kennedy</span>
+                <a href="./index.html" class="btn--link mobile-user-profile__logout">Logout</a>
             </div>
+        </div>
 
-            <section class="grid grid_flight">
+        <main class="main-content main-content--dashboard">
+            <div class="dashboard-inner-content">
+                <div class="u-margin-bottom-md">
+                    <h1 class="card__title u-text-center">Available Flights</h1>
+                    <p class="card__subtitle card__big-text">Bogotá - Colombia</p>
+                    <p class="card__subtitle card__big-text">October - 15</p>
+                </div>
 
-                <article class="flight-card">
-                    <div class="flight-card__header">
-                        <div class="flight-card__route">
-                            GUA
-                            <svg class="icon flight__icon">
-                                <use href="./assets/icons.svg#arrow"></use>
-                            </svg>
-                            BOG
-                        </div>
-                        <div class="flight-card__code">VAA025</div>
-                    </div>
-                    <div class="flight-card__body">
-                        <div class="flight-card__detail">
-                            <span class="flight-card__label">Date</span>
-                            <span class="flight-card__value">Oct 15, 2026</span>
-                        </div>
-                        <div class="flight-card__detail">
-                            <span class="flight-card__label">Time</span>
-                            <span class="flight-card__value">08:00 AM - 08:30 PM</span>
-                        </div>
-                        <div class="flight-card__detail">
-                            <span class="flight-card__label">Duration</span>
-                            <span class="flight-card__value">7h 30m</span>
-                        </div>
-                        <div class="flight-card__detail u-text-right">
-                            <span class="flight-card__label">Price</span>
-                            <span class="flight-card__price">$450</span>
-                        </div>
-                    </div>
-                </article>
+                <section class="grid grid_flight">
 
-                <article class="flight-card">
-                    <div class="flight-card__header">
-                        <div class="flight-card__route">
-                            GUA
-                            <svg class="icon flight__icon">
-                                <use href="./assets/icons.svg#arrow"></use>
-                            </svg>
-                            BOG
+                    <article class="flight-card">
+                        <div class="flight-card__header">
+                            <div class="flight-card__route">
+                                GUA
+                                <svg class="icon flight__icon">
+                                    <use href="./assets/icons.svg#arrow"></use>
+                                </svg>
+                                BOG
+                            </div>
+                            <div class="flight-card__code">VAA025</div>
                         </div>
-                        <div class="flight-card__code">VAA412</div>
-                    </div>
-                    <div class="flight-card__body">
-                        <div class="flight-card__detail">
-                            <span class="flight-card__label">Date</span>
-                            <span class="flight-card__value">Oct 15, 2026</span>
+                        <div class="flight-card__body">
+                            <div class="flight-card__detail">
+                                <span class="flight-card__label">Date</span>
+                                <span class="flight-card__value">Oct 15, 2026</span>
+                            </div>
+                            <div class="flight-card__detail">
+                                <span class="flight-card__label">Time</span>
+                                <span class="flight-card__value">08:00 AM - 08:30 PM</span>
+                            </div>
+                            <div class="flight-card__detail">
+                                <span class="flight-card__label">Duration</span>
+                                <span class="flight-card__value">7h 30m</span>
+                            </div>
+                            <div class="flight-card__detail u-text-right">
+                                <span class="flight-card__label">Price</span>
+                                <span class="flight-card__price">$450</span>
+                            </div>
                         </div>
-                        <div class="flight-card__detail">
-                            <span class="flight-card__label">Time</span>
-                            <span class="flight-card__value">10:30 AM - 11:00 PM</span>
-                        </div>
-                        <div class="flight-card__detail">
-                            <span class="flight-card__label">Duration</span>
-                            <span class="flight-card__value">7h 30m</span>
-                        </div>
-                        <div class="flight-card__detail u-text-right">
-                            <span class="flight-card__label">Price</span>
-                            <span class="flight-card__price">$380</span>
-                        </div>
-                    </div>
-                </article>
+                    </article>
 
-                <article class="flight-card">
-                    <div class="flight-card__header">
-                        <div class="flight-card__route">
-                            GUA
-                            <svg class="icon flight__icon">
-                                <use href="./assets/icons.svg#arrow"></use>
-                            </svg>
-                            BOG
+                    <article class="flight-card">
+                        <div class="flight-card__header">
+                            <div class="flight-card__route">
+                                GUA
+                                <svg class="icon flight__icon">
+                                    <use href="./assets/icons.svg#arrow"></use>
+                                </svg>
+                                BOG
+                            </div>
+                            <div class="flight-card__code">VAA412</div>
                         </div>
-                        <div class="flight-card__code">VAA836</div>
-                    </div>
-                    <div class="flight-card__body">
-                        <div class="flight-card__detail">
-                            <span class="flight-card__label">Date</span>
-                            <span class="flight-card__value">Oct 15, 2026</span>
+                        <div class="flight-card__body">
+                            <div class="flight-card__detail">
+                                <span class="flight-card__label">Date</span>
+                                <span class="flight-card__value">Oct 15, 2026</span>
+                            </div>
+                            <div class="flight-card__detail">
+                                <span class="flight-card__label">Time</span>
+                                <span class="flight-card__value">10:30 AM - 11:00 PM</span>
+                            </div>
+                            <div class="flight-card__detail">
+                                <span class="flight-card__label">Duration</span>
+                                <span class="flight-card__value">7h 30m</span>
+                            </div>
+                            <div class="flight-card__detail u-text-right">
+                                <span class="flight-card__label">Price</span>
+                                <span class="flight-card__price">$380</span>
+                            </div>
                         </div>
-                        <div class="flight-card__detail">
-                            <span class="flight-card__label">Time</span>
-                            <span class="flight-card__value">05:30 AM - 07:00 PM</span>
-                        </div>
-                        <div class="flight-card__detail">
-                            <span class="flight-card__label">Duration</span>
-                            <span class="flight-card__value">7h 30m</span>
-                        </div>
-                        <div class="flight-card__detail u-text-right">
-                            <span class="flight-card__label">Price</span>
-                            <span class="flight-card__price">$280</span>
-                        </div>
-                    </div>
-                </article>
+                    </article>
 
-                <a href="./menu.html" class="btn btn--primary u-margin-top-md">Back</a>
+                    <article class="flight-card">
+                        <div class="flight-card__header">
+                            <div class="flight-card__route">
+                                GUA
+                                <svg class="icon flight__icon">
+                                    <use href="./assets/icons.svg#arrow"></use>
+                                </svg>
+                                BOG
+                            </div>
+                            <div class="flight-card__code">VAA836</div>
+                        </div>
+                        <div class="flight-card__body">
+                            <div class="flight-card__detail">
+                                <span class="flight-card__label">Date</span>
+                                <span class="flight-card__value">Oct 15, 2026</span>
+                            </div>
+                            <div class="flight-card__detail">
+                                <span class="flight-card__label">Time</span>
+                                <span class="flight-card__value">05:30 AM - 07:00 PM</span>
+                            </div>
+                            <div class="flight-card__detail">
+                                <span class="flight-card__label">Duration</span>
+                                <span class="flight-card__value">7h 30m</span>
+                            </div>
+                            <div class="flight-card__detail u-text-right">
+                                <span class="flight-card__label">Price</span>
+                                <span class="flight-card__price">$280</span>
+                            </div>
+                        </div>
+                    </article>
 
-            </section>
+                    <a href="./menu.html" class="btn btn--primary u-margin-top-md back-button">Back</a>
+
+                </section>
+            </div>
         </main>
     </div>
 </body>

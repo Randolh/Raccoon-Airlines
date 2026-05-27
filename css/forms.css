@@ -24,7 +24,8 @@
   color: var(--color-text-muted);
 }
 
-.form__input, .form__select {
+.form__input,
+.form__select {
   width: 100%;
   padding: 0.875rem 1rem;
   font-family: var(--font-body);
@@ -37,7 +38,8 @@
   outline: none;
 }
 
-.form__input:hover, .form__select:hover {
+.form__input:hover,
+.form__select:hover {
   border-color: var(--color-text-muted);
 }
 
@@ -124,4 +126,20 @@
   text-decoration: underline;
   padding: 0;
   width: auto;
+}
+
+.back-button {
+  width: calc(100% - 3rem);
+  /* Ajusta el ancho para que no choque con los bordes */
+
+  /* --- NUEVAS PROPIEDADES PARA FIJARLO --- */
+  position: fixed;
+  bottom: 1.5rem;
+  /* Separación del borde inferior de la pantalla */
+  left: 1.5rem;
+  /* Alineado a la izquierda */
+  right: 1.5rem;
+  /* Alineado a la derecha (junto con left hace que conserve el ancho) */
+  z-index: 100;
+  /* Asegura que quede por encima de los demás elementos */
 }

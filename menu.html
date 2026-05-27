@@ -4,50 +4,119 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resident Airlines - Menu</title>
+    <title>Raccoon Airlines - Menu</title>
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/forms.css">
     <link rel="stylesheet" href="./css/layout.css">
+    <link rel="stylesheet" href="./css/responsive.css">
 </head>
 
 <body>
-    <div class="layout page-content">
+    <div class="loader-screen">
+        <div class="loader-screen__content">
+            <img class="loader-screen__logo" src="./assets/logo.svg" alt="Umbrella Logo">
+            <div class="loader-screen__bar"></div>
+        </div>
+    </div>
+    <div class="layout layout--dashboard page-content">
+        <aside class="sidebar">
+            <div class="sidebar__header">
+                <div class="sidebar__brand">
+                    <svg class="header__logo">
+                        <use href="./assets/logo.svg#logo"></use>
+                    </svg>
+                    <span>Raccoon Airlines</span>
+                </div>
+            </div>
+
+            <div class="sidebar__user">
+                <div class="sidebar__avatar">LK</div>
+                <div class="sidebar__user-info">
+                    <span class="sidebar__name">Leon Kennedy</span>
+                </div>
+            </div>
+
+            <nav class="sidebar__nav">
+                <a href="menu.html" class="sidebar__link sidebar__link--active">
+                    <svg class="sidebar__icon">
+                        <use href="./assets/icons.svg#grid"></use>
+                    </svg>
+                    Dashboard
+                </a>
+                <a href="search-flights.html" class="sidebar__link">
+                    <svg class="sidebar__icon">
+                        <use href="./assets/icons.svg#search"></use>
+                    </svg>
+                    Search Flights
+                </a>
+                <a href="checkin.html" class="sidebar__link">
+                    <svg class="sidebar__icon">
+                        <use href="./assets/icons.svg#check"></use>
+                    </svg>
+                    Check-In
+                </a>
+                <a href="my-flights.html" class="sidebar__link">
+                    <svg class="sidebar__icon">
+                        <use href="./assets/icons.svg#new"></use>
+                    </svg>
+                    My Flights
+                </a>
+            </nav>
+
+            <div class="sidebar__footer">
+                <a href="index.html" class="sidebar__link sidebar__link--logout">
+                    <svg class="sidebar__icon">
+                        <use href="./assets/icons.svg#logout"></use>
+                    </svg>
+                    Logout
+                </a>
+            </div>
+        </aside>
+
         <header class="header">
             <div class="header__brand">
                 <svg class="logo u-margin-bottom-sm">
                     <use href="./assets/logo.svg#logo"></use>
                 </svg>
-                <span>Resident Airlines</span>
-            </div>
-            <div class="header__user">
-                <span class="u-margin-right-sm">Hello Leon Kennedy!</span>
-                <a href="./index.html" class="btn--link">Log Out</a>
+                <span>Raccoon Airlines</span>
             </div>
         </header>
 
-        <main class="main-content">
-            <h1 class="u-margin-bottom-md u-text-center">How can we help you today?</h1>
-            <div class="grid">
-                <a href="./search-flights.html" class="action-card">
-                    <svg class="action-card__icon">
-                        <use href="./assets/icons.svg#search"></use>
-                    </svg>
-                    <span class="action-card__title">Search Flights</span>
-                </a>
+        <div class="mobile-user-profile">
+            <div class="mobile-user-profile__avatar">LK</div>
+            <div class="mobile-user-profile__info">
+                <span class="mobile-user-profile__name">Leon Kennedy</span>
+                <a href="./index.html" class="btn--link mobile-user-profile__logout">Logout</a>
+            </div>
+        </div>
 
-                <a href="./checkin.html" class="action-card">
-                    <svg class="action-card__icon">
-                        <use href="./assets/icons.svg#check"></use>
-                    </svg>
-                    <span class="action-card__title">Check-In</span>
-                </a>
+        <main class="main-content main-content--dashboard">
 
-                <a href="./my-flights.html" class="action-card">
-                    <svg class="action-card__icon">
-                        <use href="./assets/icons.svg#new"></use>
-                    </svg>
-                    <span class="action-card__title">My Flights</span>
-                </a>
+
+            <div class="dashboard-inner-content">
+                <h1 class="u-margin-bottom-md u-text-center">How can we help you today?</h1>
+                <div class="grid">
+                    <a href="./search-flights.html" class="action-card">
+                        <svg class="action-card__icon">
+                            <use href="./assets/icons.svg#search"></use>
+                        </svg>
+                        <span class="action-card__title">Search Flights</span>
+                    </a>
+
+                    <a href="./checkin.html" class="action-card">
+                        <svg class="action-card__icon">
+                            <use href="./assets/icons.svg#check"></use>
+                        </svg>
+                        <span class="action-card__title">Check-In</span>
+                    </a>
+
+                    <a href="./my-flights.html" class="action-card">
+                        <svg class="action-card__icon">
+                            <use href="./assets/icons.svg#new"></use>
+                        </svg>
+                        <span class="action-card__title">My Flights</span>
+                    </a>
+                </div>
             </div>
         </main>
     </div>
