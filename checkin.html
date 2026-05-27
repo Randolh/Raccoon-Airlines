@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resident Airlines - Check-In</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/forms.css">
+    <link rel="stylesheet" href="./css/layout.css">
+</head>
+
+<body>
+    <div class="layout page-content">
+        <header class="header">
+            <div class="header__brand">
+                <svg class="logo u-margin-bottom-sm">
+                    <use href="./assets/logo.svg#logo"></use>
+                </svg>
+                <span>Resident Airlines</span>
+            </div>
+            <div class="header__user">
+                <span class="u-margin-right-sm">Hello Leon Kennedy!</span>
+                <a href="./index.html" class="btn--link">Log Out</a>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <div style="max-width: 800px; margin: 0 auto; width: 100%;">
+                <h1 class="card__title u-text-center">Web Check-In</h1>
+
+                <div class="flight-card u-margin-bottom-md">
+                    <div class="flight-card__header">
+                        <div class="flight-card__route">
+                            GUA
+                            <svg class="icon flight__icon">
+                                <use href="./assets/icons.svg#arrow"></use>
+                            </svg>
+                            BOG
+                        </div>
+                    </div>
+                    <div class="flight-card__body">
+                        <div class="flight-card__detail">
+                            <span class="flight-card__label">Flight</span>
+                            <span class="flight-card__value">VAA025</span>
+                        </div>
+                        <div class="flight-card__detail">
+                            <span class="flight-card__label">Date</span>
+                            <span class="flight-card__value">Oct 15, 2026 | 08:00 AM</span>
+                        </div>
+                        <div class="flight-card__detail">
+                            <span class="flight-card__label">Passenger</span>
+                            <span class="flight-card__value">Leon Kennedy</span>
+                        </div>
+                        <div class="flight-card__detail">
+                            <span class="flight-card__label">Seat</span>
+                            <span class="flight-card__value">12A</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h2 class="card__title" style="font-size: 1.25rem;">Emergency Contact</h2>
+                    <p class="card__subtitle u-margin-bottom-md">Please provide an emergency contact before completing
+                        check-in.</p>
+
+                    <form class="form form--search">
+                        <div class="form__group">
+                            <label class="form__label" for="contact-name">Full Name</label>
+                            <input class="form__input" type="text" name="contact-name" id="contact-name"
+                                placeholder="Leon S. Kennedy" required>
+                        </div>
+                        <div class="form__group">
+                            <label class="form__label" for="contact-phone">Phone</label>
+                            <input class="form__input" type="tel" name="contact-phone" id="contact-phone"
+                                placeholder="+502 12345678" required>
+                        </div>
+                        <div class="form__group form__group--full u-margin-top-md">
+                            <a href="./menu.html" class="btn btn--primary">Complete Check-In</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>
