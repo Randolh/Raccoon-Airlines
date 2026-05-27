@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raccoon Airlines</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/forms.css">
+    <link rel="stylesheet" href="./css/layout.css">
+</head>
+
+<body>
+    <div class="layout page-content">
+        <header class="header auth-header">
+            <a href="./index.html" class="header__back">
+                <svg class="icon-small">
+                    <use href="./assets/icons.svg#arrow"></use>
+                </svg>
+                Back to Home
+            </a>
+        </header>
+        <main class="main-content main-content--centered">
+            <div class="auth-container card">
+                <div class="card__header">
+                    <svg class="logo u-margin-bottom-sm">
+                        <use href="./assets/logo.svg#logo"></use>
+                    </svg>
+                    <h1 class="card__title">Raccoon Airlines</h1>
+                    <p class="card__subtitle">FLYING TO YOUR DREAMS</p>
+                </div>
+
+                <form class="form" action="./menu.html">
+                    <div class="form__group">
+                        <label class="form__label" for="email">Email</label>
+                        <input class="form__input" type="email" name="email" id="email"
+                            placeholder="leon.kennedy@example.com" required>
+                    </div>
+
+                    <div class="form__group">
+                        <label class="form__label" for="password">Password</label>
+                        <input class="form__input" type="password" name="password" id="password" placeholder="••••••••"
+                            required>
+                    </div>
+
+                    <div class="form__group form__group--inline">
+                        <label class="form__checkbox-container">
+                            <input type="checkbox" name="remember" id="remember" class="form__checkbox">
+                            <span class="form__label">Remember my details</span>
+                        </label>
+                    </div>
+
+                    <input class="btn btn--primary u-margin-top-md" type="submit" value="Login">
+
+                    <div class="card-links u-text-center u-display-column">
+                        <a href="./register.html" class="btn--link">Create account</a>
+                        <a href="./recover.html" class="btn--link">Forgot your password?</a>
+                    </div>
+                </form>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>
