@@ -12,7 +12,61 @@
 </head>
 
 <body>
-    <div class="layout page-content">
+    <div class="layout layout--dashboard page-content">
+        <aside class="sidebar">
+            <div class="sidebar__header">
+                <div class="sidebar__brand">
+                    <svg class="header__logo">
+                        <use href="./assets/logo.svg#logo"></use>
+                    </svg>
+                    <span style="color: var(--color-secondary);">Resident Airlines</span>
+                </div>
+            </div>
+
+            <div class="sidebar__user">
+                <div class="sidebar__avatar">LK</div>
+                <div class="sidebar__user-info">
+                    <span class="sidebar__name">Leon Kennedy</span>
+                </div>
+            </div>
+
+            <nav class="sidebar__nav">
+                <a href="menu.html" class="sidebar__link">
+                    <svg class="sidebar__icon">
+                        <use href="./assets/icons.svg#grid"></use>
+                    </svg>
+                    Dashboard
+                </a>
+                <a href="search-flights.html" class="sidebar__link sidebar__link--active">
+                    <svg class="sidebar__icon">
+                        <use href="./assets/icons.svg#search"></use>
+                    </svg>
+                    Search Flights
+                </a>
+                <a href="checkin.html" class="sidebar__link">
+                    <svg class="sidebar__icon">
+                        <use href="./assets/icons.svg#check"></use>
+                    </svg>
+                    Check-In
+                </a>
+                <a href="my-flights.html" class="sidebar__link">
+                    <svg class="sidebar__icon">
+                        <use href="./assets/icons.svg#new"></use>
+                    </svg>
+                    My Flights
+                </a>
+            </nav>
+
+            <div class="sidebar__footer">
+                <a href="index.html" class="sidebar__link sidebar__link--logout">
+                    <svg class="sidebar__icon">
+                        <use href="./assets/icons.svg#logout"></use>
+                    </svg>
+                    Log Out
+                </a>
+            </div>
+        </aside>
+
         <header class="header">
             <div class="header__brand">
                 <svg class="logo u-margin-bottom-sm">
@@ -27,46 +81,48 @@
         </header>
 
         <main class="main-content">
-            <div class="card" style="max-width: 800px; margin: 0 auto; width: 100%;">
-                <div class="card__header">
-                    <h1 class="card__title">Find your next destination</h1>
-                    <p class="card__subtitle">Book your flight with Resident Airlines</p>
-                </div>
+            <div class="dashboard-inner-content">
+                <div class="card">
+                    <div class="card__header">
+                        <h1 class="card__title">Find your next destination</h1>
+                        <p class="card__subtitle">Book your flight with Resident Airlines</p>
+                    </div>
 
-                <form class="form form--search" action="./flights.html">
-                    <div class="form__group form__group--full form__group--inline u-margin-bottom-sm">
-                        <div class="form__checkbox-container">
-                            <input type="checkbox" class="form__checkbox" name="on_way" id="on_way">
-                            <label class="form__label" for="on_way">One way</label>
+                    <form class="form form--search" action="./flights.html">
+                        <div class="form__group form__group--full form__group--inline u-margin-bottom-sm">
+                            <div class="form__checkbox-container">
+                                <input type="checkbox" class="form__checkbox" name="on_way" id="on_way">
+                                <label class="form__label" for="on_way">One way</label>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="form__group">
-                        <label class="form__label" for="origin">Origin</label>
-                        <input class="form__input" type="text" name="origin" id="origin" placeholder="City or Airport"
-                            required>
-                    </div>
+                        <div class="form__group">
+                            <label class="form__label" for="origin">Origin</label>
+                            <input class="form__input" type="text" name="origin" id="origin"
+                                placeholder="City or Airport" required>
+                        </div>
 
-                    <div class="form__group">
-                        <label class="form__label" for="destination">Destination</label>
-                        <input class="form__input" type="text" name="destination" id="destination"
-                            placeholder="City or Airport" required>
-                    </div>
+                        <div class="form__group">
+                            <label class="form__label" for="destination">Destination</label>
+                            <input class="form__input" type="text" name="destination" id="destination"
+                                placeholder="City or Airport" required>
+                        </div>
 
-                    <div class="form__group">
-                        <label class="form__label" for="departure">Departure Date</label>
-                        <input class="form__input" type="date" name="departure" id="departure" required>
-                    </div>
+                        <div class="form__group">
+                            <label class="form__label" for="departure">Departure Date</label>
+                            <input class="form__input" type="date" name="departure" id="departure" required>
+                        </div>
 
-                    <div class="form__group">
-                        <label class="form__label" for="return">Return Date</label>
-                        <input class="form__input" type="date" name="return" id="return">
-                    </div>
+                        <div class="form__group">
+                            <label class="form__label" for="return">Return Date</label>
+                            <input class="form__input" type="date" name="return" id="return">
+                        </div>
 
-                    <div class="form__group form__group--full u-margin-top-md">
-                        <input class="btn btn--primary" type="submit" value="Search">
-                    </div>
-                </form>
+                        <div class="form__group form__group--full u-margin-top-md">
+                            <input class="btn btn--primary" type="submit" value="Search">
+                        </div>
+                    </form>
+                </div>
             </div>
         </main>
     </div>

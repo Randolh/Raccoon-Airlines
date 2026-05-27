@@ -260,7 +260,7 @@
 
 .sidebar__header {
   padding: 1.5rem;
-  border-bottom: 1px solid rgba(255,255,255,0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .sidebar__brand {
@@ -282,7 +282,7 @@
   display: flex;
   align-items: center;
   gap: 1rem;
-  border-bottom: 1px solid rgba(255,255,255,0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .sidebar__avatar {
@@ -341,7 +341,7 @@
 .sidebar__link:hover,
 .sidebar__link:focus,
 .sidebar__link--active {
-  background-color: rgba(255,255,255,0.1);
+  background-color: rgba(255, 255, 255, 0.1);
   color: var(--color-secondary);
 }
 
@@ -353,7 +353,7 @@
 
 .sidebar__footer {
   padding: 1rem 0;
-  border-top: 1px solid rgba(255,255,255,0.1);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .sidebar__link--logout:hover {
