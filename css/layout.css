@@ -155,6 +155,7 @@
 }
 
 .action-card__title {
+  color: var(--color-primary);
   font-size: 1.25rem;
   font-family: var(--font-heading);
   font-weight: 600;
