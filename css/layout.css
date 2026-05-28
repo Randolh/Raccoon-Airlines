@@ -37,7 +37,22 @@
 }
 
 .login-showcase {
-    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 300px;
+    background-color: var(--color-primary);
+    z-index: 999;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.login-showcase--active {
+    transform: translateX(0);
 }
 
 .header__back {
