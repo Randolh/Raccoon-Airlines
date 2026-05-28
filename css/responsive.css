@@ -15,6 +15,119 @@
         grid-template-columns: repeat(4, 1fr);
         align-items: center;
     }
+
+    .login-wrapper {
+        flex-direction: row;
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    .login-form-container {
+        flex: 0 0 50%;
+        max-width: 550px;
+        padding: 2rem 3rem;
+        box-shadow: 15px 0 30px rgba(0,0,0,0.08);
+        z-index: 2;
+        overflow-y: auto;
+    }
+
+    .login-card {
+        padding: 2rem;
+    }
+
+    .login-showcase {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-image: url('../assets/airline_bg.png');
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        padding: 3rem;
+    }
+
+    /* Subtle overlay to make text readable */
+    .login-showcase::before {
+        content: '';
+        position: absolute;
+        top: 0; left: 0; right: 0; bottom: 0;
+        background: linear-gradient(135deg, rgba(15, 23, 42, 0.4) 0%, rgba(15, 23, 42, 0.8) 100%);
+    }
+
+    .showcase-content {
+        position: relative;
+        z-index: 2;
+        text-align: center;
+        color: white;
+        padding: 3rem;
+        border-radius: 24px;
+        max-width: 600px;
+        transform: translateY(20px);
+        animation: fadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+
+    /* Glassmorphism Effect */
+    .glass-panel {
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+    }
+
+    .showcase-content h2 {
+        font-size: 3.5rem;
+        font-weight: 800;
+        margin-bottom: 0.5rem;
+        letter-spacing: -1px;
+        text-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+
+    .showcase-content p {
+        font-size: 1.1rem;
+        font-weight: 500;
+        letter-spacing: 5px;
+        margin-bottom: 2.5rem;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.9);
+    }
+
+    .showcase-features {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .feature-tag {
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        padding: 0.6rem 1.2rem;
+        border-radius: 30px;
+        font-size: 0.9rem;
+        font-weight: 500;
+        backdrop-filter: blur(8px);
+        transition: all 0.3s ease;
+        cursor: default;
+    }
+
+    .feature-tag:hover {
+        background: rgba(255, 255, 255, 0.2);
+        transform: translateY(-3px);
+        box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(40px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
 }
 
 /* Desktop */
@@ -36,6 +149,16 @@
 
     .header {
         padding: 1.5rem 4rem;
+    }
+
+    .login-form-container {
+        flex: 0 0 40%;
+        max-width: 600px;
+        padding: 4rem 5rem;
+    }
+    
+    .showcase-content h2 {
+        font-size: 4.5rem;
     }
 }
 
