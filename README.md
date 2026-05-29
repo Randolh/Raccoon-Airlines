@@ -49,3 +49,7 @@ Un flujo completamente simulado sin back-end para completar transacciones.
   <br><img src="./img/screenshots/payment-desktop.png" height="350" alt="Vista payment desktop"> <img src="./img/screenshots/payment-mobile.png" height="350" alt="Vista payment mobile"><br><hr><br>
 - **[processing.html](./processing.html)**: Pantalla de transición visual. Muestra una animación CSS indicando que el pago está siendo "procesado", y automáticamente (tras 3 segundos) redirige de vuelta a `menu.html`.
   <br><img src="./img/screenshots/processing-desktop.png" height="350" alt="Vista processing desktop"> <img src="./img/screenshots/processing-mobile.png" height="350" alt="Vista processing mobile"><br><br>
+
+### 6. Atención al Cliente y Comentarios
+- **[feedback-form.html](./feedback-form.html)**: Formulario para envío de comentarios y solicitudes de soporte por parte de los clientes. Incluye validaciones visuales de los campos y animaciones de interacción en los botones.
+  <br><img src="./img/screenshots/feedback-form-desktop.png" height="350" alt="Vista feedback-form desktop"> <img src="./img/screenshots/feedback-form-mobile.png" height="350" alt="Vista feedback-form mobile"><br><br>

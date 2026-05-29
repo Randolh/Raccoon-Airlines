@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Raccoon Airlines - Menu</title>
+    <title>Raccoon Airlines - Customer Service</title>
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/forms.css">
     <link rel="stylesheet" href="./css/layout.css">
@@ -13,12 +13,6 @@
 </head>
 
 <body>
-    <div class="loader-screen">
-        <div class="loader-screen__content">
-            <img class="loader-screen__logo" src="./assets/logo.svg" alt="Umbrella Logo">
-            <div class="loader-screen__bar"></div>
-        </div>
-    </div>
     <div class="layout layout--dashboard page-content">
         <aside class="sidebar">
             <div class="sidebar__header">
@@ -38,7 +32,7 @@
             </div>
 
             <nav class="sidebar__nav">
-                <a href="menu.html" class="sidebar__link sidebar__link--active">
+                <a href="menu.html" class="sidebar__link">
                     <svg class="sidebar__icon">
                         <use href="./assets/icons.svg#grid"></use>
                     </svg>
@@ -62,8 +56,7 @@
                     </svg>
                     My Flights
                 </a>
-
-                <a href="feedback-form.html" class="sidebar__link">
+                <a href="feedback-form.html" class="sidebar__link sidebar__link--active">
                     <svg class="sidebar__icon">
                         <use href="./assets/icons.svg#message"></use>
                     </svg>
@@ -96,41 +89,48 @@
                 <span class="mobile-user-profile__name">Leon Kennedy</span>
                 <a href="./index.html" class="btn--link mobile-user-profile__logout">Logout</a>
             </div>
+            <a href="./menu.html" class="mobile-user-profile__menu">Menú</a>
         </div>
 
         <main class="main-content main-content--dashboard">
-
-
             <div class="dashboard-inner-content">
-                <h1 class="u-margin-bottom-md u-text-center">How can we help you today?</h1>
-                <div class="grid">
-                    <a href="./search-flights.html" class="action-card">
-                        <svg class="action-card__icon">
-                            <use href="./assets/icons.svg#search"></use>
-                        </svg>
-                        <span class="action-card__title">Search Flights</span>
-                    </a>
+                <div class="card-check">
+                    <div class="card">
+                        <div class="card__header">
+                            <h1 class="card__title">Customer Service</h1>
+                            <p class="card__subtitle">Send us your suggestions or comments</p>
+                        </div>
 
-                    <a href="./checkin.html" class="action-card">
-                        <svg class="action-card__icon">
-                            <use href="./assets/icons.svg#check"></use>
-                        </svg>
-                        <span class="action-card__title">Check-In</span>
-                    </a>
+                        <form class="form" action="./menu.html">
+                            <div class="form__group">
+                                <label class="form__label" for="name">Full Name</label>
+                                <input class="form__input" type="text" name="name" id="name"
+                                    placeholder="Leon Kennedy" required pattern=".{3,}">
+                            </div>
 
-                    <a href="./my-flights.html" class="action-card">
-                        <svg class="action-card__icon">
-                            <use href="./assets/icons.svg#new"></use>
-                        </svg>
-                        <span class="action-card__title">My Flights</span>
-                    </a>
+                            <div class="form__group">
+                                <label class="form__label" for="email">E-mail</label>
+                                <input class="form__input" type="email" name="email" id="email"
+                                    placeholder="leon.kennedy@example.com" required>
+                            </div>
 
-                    <a href="./feedback-form.html" class="action-card">
-                        <svg class="action-card__icon">
-                            <use href="./assets/icons.svg#message"></use>
-                        </svg>
-                        <span class="action-card__title">Support</span>
-                    </a>
+                            <div class="form__group">
+                                <label class="form__label" for="topic">Topic</label>
+                                <input class="form__input" type="text" name="topic" id="topic"
+                                    placeholder="Flight problem or suggestion" required minlength="5">
+                            </div>
+
+                            <div class="form__group">
+                                <label class="form__label" for="comment">Comment</label>
+                                <textarea class="form__textarea" name="comment" id="comment"
+                                    placeholder="Write your message here..." required minlength="25"></textarea>
+                            </div>
+
+                            <div class="form__group form__group--full u-margin-top-md">
+                                <button class="btn btn--primary btn--animated" type="submit">Send Message</button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
         </main>
