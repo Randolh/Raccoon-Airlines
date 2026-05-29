@@ -130,16 +130,54 @@
 
 .back-button {
   width: calc(100% - 3rem);
-  /* Ajusta el ancho para que no choque con los bordes */
-
-  /* --- NUEVAS PROPIEDADES PARA FIJARLO --- */
   position: fixed;
   bottom: 1.5rem;
-  /* Separación del borde inferior de la pantalla */
   left: 1.5rem;
-  /* Alineado a la izquierda */
   right: 1.5rem;
-  /* Alineado a la derecha (junto con left hace que conserve el ancho) */
   z-index: 100;
-  /* Asegura que quede por encima de los demás elementos */
+}
+
+@keyframes processingPulse {
+  0% { background-color: var(--color-primary); box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); }
+  50% { background-color: #d32f2f; box-shadow: 0 0 15px rgba(211, 47, 47, 0.6); }
+  100% { background-color: var(--color-primary); box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); }
+}
+
+.btn--animated {
+  transition: all 0.3s ease;
+}
+
+.btn--animated:hover, .btn--animated:focus {
+  animation: processingPulse 1.5s infinite;
+  transform: translateY(-2px);
+}
+
+.form__input:not(:placeholder-shown):valid, 
+.form__textarea:not(:placeholder-shown):valid {
+  border-color: #4CAF50;
+}
+
+.form__input:not(:placeholder-shown):invalid, 
+.form__textarea:not(:placeholder-shown):invalid {
+  border-color: #F44336;
+}
+
+.form__textarea {
+  width: 100%;
+  padding: 0.875rem 1rem;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--color-text-main);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  transition: var(--transition-default);
+  outline: none;
+  resize: vertical;
+  min-height: 120px;
+}
+
+.form__textarea:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 2px rgba(0, 51, 102, 0.1);
 }
