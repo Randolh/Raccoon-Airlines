@@ -117,13 +117,13 @@
                             <div class="form__group">
                                 <label class="form__label" for="topic">Topic</label>
                                 <input class="form__input" type="text" name="topic" id="topic"
-                                    placeholder="Flight problem or suggestion" required pattern=".{5,}">
+                                    placeholder="Flight problem or suggestion" required minlength="5">
                             </div>
 
                             <div class="form__group">
                                 <label class="form__label" for="comment">Comment</label>
                                 <textarea class="form__textarea" name="comment" id="comment"
-                                    placeholder="Write your message here..." required></textarea>
+                                    placeholder="Write your message here..." required minlength="25"></textarea>
                             </div>
 
                             <div class="form__group form__group--full u-margin-top-md">
